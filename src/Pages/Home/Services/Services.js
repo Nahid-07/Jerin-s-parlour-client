@@ -3,6 +3,7 @@ import { Button, Card, Container } from "react-bootstrap";
 import antiAge from "../../../assets/icons/Group 1373.png";
 import hairColor from "../../../assets/icons/Group 1372.png";
 import skin from "../../../assets/icons/Group 1374.png";
+import './Services.css'
 
 const Services = () => {
   return (
@@ -14,7 +15,7 @@ const Services = () => {
         Our Awesome <span style={{ color: "#F73E7B" }}>Services</span>
       </div>
       <div className="d-lg-flex gap-5 my-5">
-        <Card style={{ padding: "15px" }}>
+        <Card className="shadows" style={{ padding: "15px" }}>
           <Card.Body className="d-flex flex-column align-items-center">
             <img src={antiAge} alt="" width="80px" />
             <Card.Title>Anti Age Face Treatment</Card.Title>
@@ -30,7 +31,7 @@ const Services = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{ padding: "15px" }} className="my-5 my-lg-0">
+        <Card style={{ padding: "15px" }} className="my-5 my-lg-0 shadows">
           <Card.Body className="d-flex flex-column align-items-center">
             <img src={hairColor} alt="" width="80px" />
             <Card.Title>Hair Color & Styleing</Card.Title>
@@ -46,7 +47,7 @@ const Services = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{ padding: "15px" }}>
+        <Card className="shadows" style={{ padding: "15px" }}>
           <Card.Body className="d-flex flex-column align-items-center">
             <img src={skin} alt="" width="80px" />
             <Card.Title>Skin Care Treatment</Card.Title>
