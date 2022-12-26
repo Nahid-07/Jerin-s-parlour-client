@@ -10,19 +10,19 @@ function Header() {
   return (
     <Navbar expand="lg" className="py-4 nav-bg">
       <Container>
-        <Link to='/'>
-        <Navbar.Brand href="#home">
-          <img style={{ width: "127px" }} src={logo} alt="" />
-        </Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand href="#home">
+            <img style={{ width: "127px" }} src={logo} alt="" />
+          </Navbar.Brand>
         </Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="fw-semibold">
-            <Link to='/'>
-            <Nav.Link className="me-4" href="#home">
-              Home
-            </Nav.Link>
+            <Link to="/">
+              <Nav.Link className="me-4" href="#home">
+                Home
+              </Nav.Link>
             </Link>
             <Nav.Link className="me-4" href="#link">
               Our Portfolio
@@ -33,7 +33,7 @@ function Header() {
             <Nav.Link className="me-4" href="#link">
               Contact Us
             </Nav.Link>
-            <Link to='/login'>
+            <Link to="/login">
               <Button
                 style={{
                   backgroundColor: "#F73E7B",
