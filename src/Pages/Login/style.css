@@ -51,6 +51,7 @@
     }
     .form-style{
         width: 100%;
+        border: none;
     }
     .styleInp{
         min-width: 100%;
