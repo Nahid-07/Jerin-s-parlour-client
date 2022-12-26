@@ -21,7 +21,10 @@ const Services = () => {
       </div>
       <div className="d-lg-flex gap-5 my-5">
         {services.map((service) => (
-          <Card className="shadows position-relative" style={{ padding: "15px" }}>
+          <Card
+            className="shadows position-relative"
+            style={{ padding: "15px" }}
+          >
             <Card.Body className="d-flex flex-column align-items-center">
               <img src={service.img} alt="" width="80px" />
               <Card.Title>{service.serviceName}</Card.Title>
