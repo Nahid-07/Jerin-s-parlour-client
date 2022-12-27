@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
+import { toast } from "react-hot-toast";
 import { authContext } from "../../ContextApi/AuthProvider";
 
 const Signup = () => {
@@ -28,6 +29,7 @@ const Signup = () => {
         .then((result) => {
           const user = result.user;
           console.log(user);
+          toast.success('Successfully signed in')
         })
         .catch((err) => setErr(err.message));
     } else {
