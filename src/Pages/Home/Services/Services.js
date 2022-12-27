@@ -20,8 +20,8 @@ const Services = () => {
         Our Awesome <span style={{ color: "#F73E7B" }}>Services</span>
       </div>
       <div className="d-lg-flex gap-5 my-5">
-        {services.map((service) => (
-          <Card
+        {services.map((service,i) => (
+          <Card key={i}
             className="shadows position-relative"
             style={{ padding: "15px" }}
           >
