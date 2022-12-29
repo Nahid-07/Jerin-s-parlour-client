@@ -4,6 +4,7 @@ import "./Services.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Service from "./Service";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -13,7 +14,7 @@ const Services = () => {
       .then((data) => setServices(data));
   }, []);
   const handleBooked = ()=>{
-
+      
   }
   return (
     <Container>
@@ -24,33 +25,7 @@ const Services = () => {
         Our Awesome <span style={{ color: "#F73E7B" }}>Services</span>
       </div>
       <div className="d-lg-flex gap-5 my-5">
-        {services.map((service) => (
-          <Card key={service._id}
-            className="shadows position-relative"
-            style={{ padding: "15px" }}
-          >
-            <Card.Body className="d-flex flex-column align-items-center">
-              <img src={service.img} alt="" width="80px" />
-              <Card.Title>{service.serviceName}</Card.Title>
-              <Card.Subtitle
-                style={{
-                  color: "#F73E7B",
-                  fontWeight: "600",
-                  fontSize: "20px",
-                }}
-                className="mb-2"
-              >
-                {service.price}
-              </Card.Subtitle>
-              <Card.Text style={{ textAlign: "center" }}>
-                {service.details}
-              </Card.Text>
-              <div className="bookbtnDiv">
-                <Link to={`/servicedetails/${service._id}`}><button>Book now</button></Link>
-              </div>
-            </Card.Body>
-          </Card>
-        ))}
+        {services.map((service) => <Service key={service._id} service={service} ></Service>)}
       </div>
       <div>
         <Button

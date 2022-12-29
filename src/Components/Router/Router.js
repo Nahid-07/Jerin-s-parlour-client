@@ -4,7 +4,6 @@ import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Signup/Signup";
 import Layout from "../Layout/Layout";
 import MyCart from "../../Pages/My cart/MyCart";
-import ServiceDetails from "../../Pages/Home/Services/ServiceDetails";
 
 export let router = createBrowserRouter([
     {
@@ -27,11 +26,7 @@ export let router = createBrowserRouter([
                 path: '/my-cart',
                 element: <MyCart></MyCart>
             },
-            {
-                path: '/servicedetails/:id',
-                element: <ServiceDetails></ServiceDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
-            },
+            
         ]
     }
 ])
