@@ -19,13 +19,13 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="fw-semibold">
-            <Link to="/">
-              <Nav.Link className="me-4" href="#home">
+            
+              <Nav.Link as={Link} to='/' className="me-4" href="#home">
                 Home
               </Nav.Link>
-            </Link>
-            <Nav.Link className="me-4" href="#link">
-              Our Portfolio
+            
+            <Nav.Link as={Link} to='my-cart' className="me-4" >
+              My Cart
             </Nav.Link>
             <Nav.Link className="me-4" href="#link">
               Our Team
