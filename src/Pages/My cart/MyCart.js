@@ -1,12 +1,12 @@
 import React from "react";
 import { BsCart, BsChatLeftText, BsListStars } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import './book.css'
+import './mycart.css'
 
 const MyCart = () => {
   return (
-    <div className="row">
-      <div className="col-2">
+    <div className="row container-row">
+      <div className="col-2 side-menu-bar">
         <ul className="list-container">
             <li>
                 <BsCart className="icon"/>
@@ -22,7 +22,9 @@ const MyCart = () => {
             </li>
         </ul>
       </div>
-      <div className="col-10 bg">kljflsdjflsdj</div>
+      <div className="col-10 bg">
+        
+      </div>
     </div>
   );
 };

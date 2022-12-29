@@ -17,3 +17,7 @@
     font-weight: 600;
     margin-right: 10px;
 }
+.side-menu-bar{
+    height: 100vh;
+    background-color: #FFF8F5;
+}

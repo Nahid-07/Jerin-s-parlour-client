@@ -3,14 +3,18 @@ import { Button, Card, Container } from "react-bootstrap";
 import "./Services.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+  const handleBooked = ()=>{
+
+  }
   return (
     <Container>
       <div
@@ -20,8 +24,8 @@ const Services = () => {
         Our Awesome <span style={{ color: "#F73E7B" }}>Services</span>
       </div>
       <div className="d-lg-flex gap-5 my-5">
-        {services.map((service,i) => (
-          <Card key={i}
+        {services.map((service) => (
+          <Card key={service._id}
             className="shadows position-relative"
             style={{ padding: "15px" }}
           >
@@ -42,7 +46,7 @@ const Services = () => {
                 {service.details}
               </Card.Text>
               <div className="bookbtnDiv">
-                <button>Book now</button>
+                <Link to={`/servicedetails/${service._id}`}><button>Book now</button></Link>
               </div>
             </Card.Body>
           </Card>
