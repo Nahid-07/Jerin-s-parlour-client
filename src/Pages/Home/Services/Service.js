@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { toast } from 'react-hot-toast';
 
 const Service = ({service}) => {
-    console.log(service);
+    // console.log(service);
     const handleBooked = (id)=>{
         const bookedItems = {
             bookedItemsName : service.serviceName,

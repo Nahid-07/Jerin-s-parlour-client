@@ -1,12 +1,13 @@
 import React from "react";
 import { BsCart, BsChatLeftText, BsListStars } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import Header from "../../Shared/Header/Header";
 import './mycart.css'
 
 const MyCart = () => {
   return (
     <div className="row container-row">
-      <div className="col-2 side-menu-bar">
+      <div className="col-2 side-menu-bar p-0">
         <ul className="list-container">
             <li>
                 <BsCart className="icon"/>
@@ -14,7 +15,7 @@ const MyCart = () => {
             </li>
             <li>
                 <BsListStars className="icon" />
-                <Link>Book list</Link>
+                <Link to='/my-cart/booklist'>Book list</Link>
             </li>
             <li>
                 <BsChatLeftText className="icon" />
@@ -22,8 +23,9 @@ const MyCart = () => {
             </li>
         </ul>
       </div>
-      <div className="col-10 bg">
-        
+      <div className="col-10 bg p-0">
+        <Header></Header>
+        <Outlet></Outlet>
       </div>
     </div>
   );
