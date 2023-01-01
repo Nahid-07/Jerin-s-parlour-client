@@ -15,7 +15,7 @@ const MyCart = () => {
             </li>
             <li>
                 <BsListStars className="icon" />
-                <Link to='/my-cart'>Book list</Link>
+                <Link to='/my-cart'>Booklist</Link>
             </li>
             <li>
                 <BsChatLeftText className="icon" />
