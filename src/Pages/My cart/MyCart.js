@@ -15,11 +15,11 @@ const MyCart = () => {
             </li>
             <li>
                 <BsListStars className="icon" />
-                <Link to='/my-cart/booklist'>Book list</Link>
+                <Link to='/my-cart'>Book list</Link>
             </li>
             <li>
                 <BsChatLeftText className="icon" />
-                <Link>Review</Link>
+                <Link to='/my-cart/review'>Review</Link>
             </li>
         </ul>
       </div>

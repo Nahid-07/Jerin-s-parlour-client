@@ -6,6 +6,7 @@ import Layout from "../Layout/Layout";
 import MyCart from "../../Pages/My cart/MyCart";
 import Booklist from "../../booklist/Booklist";
 import Payment from "../../Payment/Payment";
+import Review from "../../Review/Review";
 
 export let router = createBrowserRouter([
     {
@@ -35,12 +36,16 @@ export let router = createBrowserRouter([
         children:[
             
                 {
-                    path:'/my-cart/booklist',
+                    path:'/my-cart',
                     element: <Booklist></Booklist>
                 },
                 {
                     path:'/my-cart/payment',
                     element: <Payment></Payment>
+                },
+                {
+                    path:'/my-cart/review',
+                    element: <Review></Review>
                 },
             
         ]
