@@ -5,6 +5,7 @@ import Signup from "../../Pages/Signup/Signup";
 import Layout from "../Layout/Layout";
 import MyCart from "../../Pages/My cart/MyCart";
 import Booklist from "../../booklist/Booklist";
+import Payment from "../../Payment/Payment";
 
 export let router = createBrowserRouter([
     {
@@ -36,7 +37,11 @@ export let router = createBrowserRouter([
                 {
                     path:'/my-cart/booklist',
                     element: <Booklist></Booklist>
-                }
+                },
+                {
+                    path:'/my-cart/payment',
+                    element: <Payment></Payment>
+                },
             
         ]
     },

@@ -11,7 +11,7 @@ const MyCart = () => {
         <ul className="list-container">
             <li>
                 <BsCart className="icon"/>
-                <Link>Book</Link>
+                <Link to='/my-cart/payment'>Book</Link>
             </li>
             <li>
                 <BsListStars className="icon" />
