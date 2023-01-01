@@ -61,7 +61,7 @@ export let router = createBrowserRouter([
         element:<Admin></Admin>,
         children:[
             {
-                path:'/admin/orderlist',
+                path:'/admin',
                 element:<OrderList></OrderList>
             },
             {

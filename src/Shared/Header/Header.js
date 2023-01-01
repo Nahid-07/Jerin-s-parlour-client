@@ -24,7 +24,7 @@ function Header() {
                 Home
               </Nav.Link>
             
-            <Nav.Link as={Link} to='my-cart' className="me-4" >
+            <Nav.Link as={Link} to='/my-cart' className="me-4" >
               My Cart
             </Nav.Link>
             <Nav.Link className="me-4" href="#link">
