@@ -1,0 +1,46 @@
+.payment-field {
+  margin: 20px;
+}
+.same-size-field {
+  width: 570px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+}
+.devideInp {
+  width: 280px;
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: #fff;
+}
+.radio {
+  margin-bottom: 20px;
+}
+#credit {
+  /* display: inline-block; */
+  margin-left: 50px;
+}
+.labelMargin {
+  margin-left: 10px;
+}
+.confirmPay {
+  width: 570px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+.paymentBtn {
+  width: 170px;
+  padding: 15px;
+  background-color: #f63e7b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.payAmmount {
+  font-size: 18px;
+  font-weight: 500;
+}
