@@ -4,9 +4,15 @@ import Login from "../../Pages/Login/Login";
 import Signup from "../../Pages/Signup/Signup";
 import Layout from "../Layout/Layout";
 import MyCart from "../../Pages/My cart/MyCart";
-import Booklist from "../../booklist/Booklist";
+
 import Payment from "../../Payment/Payment";
 import Review from "../../Review/Review";
+import Admin from "../../Pages/Admin/Admin";
+import OrderList from "../../Pages/Admin/OrderList/OrderList";
+import AddService from "../../Pages/Admin/AddService/AddService";
+import MakeAdmin from "../../Pages/Admin/MakeAdmin/MakeAdmin";
+import MangeService from "../../Pages/Admin/ManageService/MangeService";
+import Booklist from "../../booklist/Booklist";
 
 export let router = createBrowserRouter([
     {
@@ -35,10 +41,10 @@ export let router = createBrowserRouter([
         element: <MyCart></MyCart>,
         children:[
             
-                {
-                    path:'/my-cart',
-                    element: <Booklist></Booklist>
-                },
+            {
+                path:'/my-cart',
+                element: <Booklist></Booklist>
+            },
                 {
                     path:'/my-cart/payment',
                     element: <Payment></Payment>
@@ -50,4 +56,26 @@ export let router = createBrowserRouter([
             
         ]
     },
+    {
+        path:'/admin',
+        element:<Admin></Admin>,
+        children:[
+            {
+                path:'/admin/orderlist',
+                element:<OrderList></OrderList>
+            },
+            {
+                path:'/admin/addservice',
+                element:<AddService></AddService>
+            },
+            {
+                path:'/admin/makeadmin',
+                element:<MakeAdmin></MakeAdmin>
+            },
+            {
+                path:'/admin/manageservice',
+                element:<MangeService></MangeService>
+            },
+        ]
+    }
 ])

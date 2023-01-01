@@ -33,6 +33,9 @@ function Header() {
             <Nav.Link className="me-4" href="#link">
               Contact Us
             </Nav.Link>
+            <Nav.Link as={Link} to='/admin' className="me-4" href="#home">
+                Admin
+              </Nav.Link>
             <Link to="/login">
               <Button
                 style={{
