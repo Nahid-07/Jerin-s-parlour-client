@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-hot-toast";
 import "./addservice.css";
 
 const AddService = () => {
@@ -20,8 +21,13 @@ const AddService = () => {
       },
       body: JSON.stringify(service)
     })
-    .then(res => res.json)
-    .catch(err => console.log(err.message))
+    .then(res => res.json())
+    .then(data => {
+      if(data.acknowledged){
+        toast.success('Service added');
+        form.reset()
+      }
+    })
 
   }
   return (
