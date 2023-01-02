@@ -7,7 +7,7 @@ const Booklist = () => {
   const [bookedItems, setBookedItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/booklist")
+    fetch("https://jerins-parlour-server.vercel.app/booklist")
       .then((res) => res.json())
       .then((data) => setBookedItems(data));
   }, []);

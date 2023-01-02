@@ -27,7 +27,7 @@ const Signup = () => {
     if (password === confirmPassword) {
       singUp(email, password)
         .then(() => {
-          fetch('http://localhost:5000/users',{
+          fetch('https://jerins-parlour-server.vercel.app/users',{
             method: "POST",
             headers:{
               "content-type" : "application/json"

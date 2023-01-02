@@ -14,7 +14,7 @@ const Service = ({service}) => {
         }
         alert('Are you sure you want to book this service?')
         if(alert){
-            fetch('http://localhost:5000/booklists',{
+            fetch('https://jerins-parlour-server.vercel.app/booklists',{
             method: "POST",
             headers:{
                 "content-type" : "application/json"
