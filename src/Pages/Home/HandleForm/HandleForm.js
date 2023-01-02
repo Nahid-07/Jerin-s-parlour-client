@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Col, Container, FloatingLabel, Form, Row } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  FloatingLabel,
+  Form,
+  Row,
+} from "react-bootstrap";
 
 const HandleForm = () => {
   return (
@@ -43,21 +50,21 @@ const HandleForm = () => {
             <Form.Control as="textarea" rows={3} placeholder="Your message" />
           </Row>
           <div className="mt-3">
-        <Button
-          className="mb-5"
-          style={{
-            backgroundColor: "#F73E7B",
-            border: "0",
-            padding: "13px 33px",
-            display: "block",
-            margin: "0 auto",
-          }}
-          variant="primary"
-          Button
-        >
-          Explore More
-        </Button>
-      </div>
+            <Button
+              className="mb-5"
+              style={{
+                backgroundColor: "#F73E7B",
+                border: "0",
+                padding: "13px 33px",
+                display: "block",
+                margin: "0 auto",
+              }}
+              variant="primary"
+              Button
+            >
+              Submit
+            </Button>
+          </div>
         </form>
       </Container>
     </div>
