@@ -80,7 +80,8 @@ export let router = createBrowserRouter([
             },
             {
                 path:'/admin/manageservice',
-                element:<MangeService></MangeService>
+                element:<MangeService></MangeService>,
+                
             },
         ]
     }

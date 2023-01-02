@@ -21,15 +21,25 @@ const Signup = () => {
       lastName,
       email,
       password,
-      confirmPassword,
+      confirmPassword
     };
 
     if (password === confirmPassword) {
       singUp(email, password)
-        .then((result) => {
-          const user = result.user;
-          console.log(user);
-          toast.success("Successfully signed in");
+        .then(() => {
+          fetch('http://localhost:5000/users',{
+            method: "POST",
+            headers:{
+              "content-type" : "application/json"
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(res => res.json())
+          .then(data => {
+            if(data.acknowledged){
+              toast.success("Successfully signed in");
+            }
+          })
         })
         .catch((err) => setErr(err.message));
     } else {
