@@ -13,6 +13,7 @@ import AddService from "../../Pages/Admin/AddService/AddService";
 import MakeAdmin from "../../Pages/Admin/MakeAdmin/MakeAdmin";
 import MangeService from "../../Pages/Admin/ManageService/MangeService";
 import Booklist from "../../booklist/Booklist";
+import PrivetRouter from "./PrivetRouter";
 
 export let router = createBrowserRouter([
     {
@@ -38,7 +39,7 @@ export let router = createBrowserRouter([
     },
     {
         path: '/my-cart',
-        element: <MyCart></MyCart>,
+        element: <PrivetRouter><MyCart></MyCart></PrivetRouter>,
         children:[
             
             {

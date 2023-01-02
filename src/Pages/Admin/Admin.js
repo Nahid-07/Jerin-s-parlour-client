@@ -15,7 +15,7 @@ const Admin = () => {
         <ul className="list-container">
           <li>
             <BsCart className="icon" />
-            <Link to="/admin/orderlist">Orderlist</Link>
+            <Link to="/admin">Orderlist</Link>
           </li>
           <li>
             <BsPlusCircle className="icon" />

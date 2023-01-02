@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
 import { toast } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../ContextApi/AuthProvider";
 import "./style.css";
 
 function Login() {
+  let navigate = useNavigate();
+  let location = useLocation();
   const [err,setErr] = useState('');
+  let from = location.state?.from?.pathname || "/"
   const {login} = useContext(authContext);
   const handleLogin = e =>{
     e.preventDefault()
@@ -19,6 +22,7 @@ function Login() {
       const user = result.user;
       console.log(user);
       toast.success('Successfully logged in');
+      navigate(from, { replace: true })
     })
     .cathc(err => setErr(err.message))
   }

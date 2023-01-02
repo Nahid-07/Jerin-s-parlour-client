@@ -5,8 +5,14 @@ import Navbar from "react-bootstrap/Navbar";
 import "./Header.css";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { authContext } from "../../ContextApi/AuthProvider";
 
 function Header() {
+  const {user,logOut} = useContext(authContext);
+  const handleLogout=()=>{
+    logOut().then(()=>{}).catch(err => console.log(err.message))
+  }
   return (
     <Navbar expand="lg" className="py-4 nav-bg">
       <Container>
@@ -37,7 +43,19 @@ function Header() {
                 Admin
               </Nav.Link>
             <Link to="/login">
-              <Button
+              {
+                user?.uid ? <Button
+                style={{
+                  backgroundColor: "#F73E7B",
+                  border: "0",
+                  padding: "10px 40px",
+                }}
+                variant="primary"
+                Button
+                onClick={handleLogout}
+              >
+                Logout
+              </Button> : <Button
                 style={{
                   backgroundColor: "#F73E7B",
                   border: "0",
@@ -48,6 +66,7 @@ function Header() {
               >
                 Login
               </Button>
+              }
             </Link>
           </Nav>
         </Navbar.Collapse>
