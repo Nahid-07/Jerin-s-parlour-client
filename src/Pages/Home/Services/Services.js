@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Container } from "react-bootstrap";
+import { Button, Card, Container, Nav } from "react-bootstrap";
 import "./Services.css";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -28,7 +28,8 @@ const Services = () => {
         {services.map((service) => <Service key={service._id} service={service} ></Service>)}
       </div>
       <div>
-        <Button
+      <Nav.Link as={Link} to='/explore' className="me-4" href="#home">
+      <Button
           className="mb-5"
           style={{
             backgroundColor: "#F73E7B",
@@ -42,6 +43,9 @@ const Services = () => {
         >
           Explore More
         </Button>
+              </Nav.Link>
+        
+        
       </div>
     </Container>
   );

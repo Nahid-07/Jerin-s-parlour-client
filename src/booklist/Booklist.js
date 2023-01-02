@@ -11,7 +11,7 @@ const Booklist = () => {
       .then((res) => res.json())
       .then((data) => setBookedItems(data));
   }, []);
-  console.log(bookedItems);
+  // console.log(bookedItems);
   return (
     <div className="d-flex flex-column justify-content-center align-items-center my-3 gap-3">
       {bookedItems.map((booked) => (

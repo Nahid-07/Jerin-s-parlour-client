@@ -14,6 +14,7 @@ import MakeAdmin from "../../Pages/Admin/MakeAdmin/MakeAdmin";
 import MangeService from "../../Pages/Admin/ManageService/MangeService";
 import Booklist from "../../booklist/Booklist";
 import PrivetRouter from "./PrivetRouter";
+import ExploreMore from "../../Pages/Exploremore/ExploreMore";
 
 export let router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ export let router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup />
+            },
+            {
+                path: '/explore',
+                element: <ExploreMore></ExploreMore>
             },
             
             

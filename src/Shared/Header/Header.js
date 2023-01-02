@@ -33,10 +33,10 @@ function Header() {
             <Nav.Link as={Link} to='/my-cart' className="me-4" >
               My Cart
             </Nav.Link>
-            <Nav.Link className="me-4" href="#link">
+            <Nav.Link className="me-4" href="#link" title="Route not defined">
               Our Team
             </Nav.Link>
-            <Nav.Link className="me-4" href="#link">
+            <Nav.Link className="me-4" href="#link" title="Route not defined">
               Contact Us
             </Nav.Link>
             <Nav.Link as={Link} to='/admin' className="me-4" href="#home">

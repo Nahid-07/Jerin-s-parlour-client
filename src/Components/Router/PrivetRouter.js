@@ -6,7 +6,7 @@ import { authContext } from '../../ContextApi/AuthProvider';
 const PrivetRouter = ({children}) => {
     let location = useLocation()
     const {user} = useContext(authContext)
-    if(!user?.email){
+    if(!user){
         return <Navigate to="/login" state={{ from: location }} replace />
     }
     return children
