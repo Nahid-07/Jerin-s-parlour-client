@@ -11,7 +11,7 @@ function Login() {
   let location = useLocation();
   const [err,setErr] = useState('');
   let from = location.state?.from?.pathname || "/"
-  const {login} = useContext(authContext);
+  const {login,googleLogin} = useContext(authContext);
   const handleLogin = e =>{
     e.preventDefault()
     const form = e.target;
@@ -20,11 +20,18 @@ function Login() {
     login(email,password)
     .then(result => {
       const user = result.user;
-      console.log(user);
       toast.success('Successfully logged in');
       navigate(from, { replace: true })
     })
     .cathc(err => setErr(err.message))
+  }
+  const handleGoogle = ()=>{
+    googleLogin().then(()=>{
+      toast.success("Successfully logged in")
+    }).cathc(err => {
+      toast.error(err.message)
+      navigate(from, { replace: true })
+    })
   }
   return (
     <Container>
@@ -43,7 +50,7 @@ function Login() {
             <hr/>
             </div>
         </form>
-          <button className="google-button">Continue with google</button>
+          <button onClick={handleGoogle} className="google-button">Continue with google</button>
         </div>
       </div>
     </Container>

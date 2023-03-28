@@ -41,9 +41,9 @@ function Header() {
             <Nav.Link className="me-4" href="#link" title="Route not defined">
               Contact Us
             </Nav.Link>
-             <Nav.Link as={Link} to="/admin" className="me-4" href="#home">
+             {user && <Nav.Link as={Link} to="/admin" className="me-4" href="#home">
               Admin
-            </Nav.Link>
+            </Nav.Link>}
             
             <Link to="/login">
               {user?.uid ? (
